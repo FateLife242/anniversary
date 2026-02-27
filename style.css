@@ -443,8 +443,10 @@ p {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 450px;
-    height: auto;
-    min-height: 400px;
+    max-height: 85vh;
+    /* Limit height */
+    overflow-y: auto;
+    /* Enable scrolling */
     display: flex;
     flex-direction: column;
     z-index: 2;
@@ -452,6 +454,19 @@ p {
     position: relative;
     filter: none !important;
     /* Force no blur on content */
+    scrollbar-width: thin;
+    /* Modern browsers */
+    scrollbar-color: #ff85a1 transparent;
+}
+
+/* Custom scrollbar for Webkit */
+.modal-content.letter-pop-up::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content.letter-pop-up::-webkit-scrollbar-thumb {
+    background-color: #ff85a1;
+    border-radius: 10px;
 }
 
 .pop-up-letter {
@@ -678,5 +693,31 @@ p {
 
     .glass-island {
         padding: 30px 20px;
+    }
+
+    .modal-content.letter-pop-up {
+        padding: 30px 20px;
+        /* Smaller padding on mobile */
+        width: 95%;
+        /* More width on mobile */
+        max-height: 90vh;
+    }
+
+    .pop-up-letter h2 {
+        font-size: 36px;
+        /* Smaller heading on mobile */
+        margin-bottom: 20px;
+    }
+
+    .letter-text p {
+        font-size: 16px;
+        /* Slightly smaller text */
+        margin-bottom: 15px;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
     }
 }
