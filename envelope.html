@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter</title>
+    <link rel="stylesheet" href="envelope.css">
+    <link href="https://fonts.cdnfonts.com/css/valentine-rosella" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="envelope-wrapper" id="envelope">
+        <div class="heart"></div>
+        <div class="sides"></div>
+    </div>
+
+    <div class="instruction">Tap the envelope to open</div>
+
+    <script>
+        const envelope = document.getElementById('envelope');
+        envelope.addEventListener('click', () => {
+            if (!envelope.classList.contains('opened')) {
+                envelope.classList.add('opened');
+                // Notify parent to open modal after flap opens
+                window.parent.postMessage('open-letter', '*');
+            } else {
+                envelope.classList.remove('opened');
+            }
+        });
+
+        // Listen for close message from parent
+        window.addEventListener('message', (event) => {
+            if (event.data === 'close-envelope') {
+                envelope.classList.remove('opened');
+            }
+        });
+    </script>
+</body>
+
+</html>

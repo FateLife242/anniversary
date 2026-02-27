@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/valentine-rosella" rel="stylesheet">
+</head>
+
+<body class="dashboard-page">
+    <div id="unlocked-state" class="screen active">
+        <nav class="top-nav">
+            <div class="logo"></div>
+            <button id="lock-again" class="btn-secondary">Back</button>
+        </nav>
+        <main class="content-wrapper">
+            <section class="hero-section">
+                <h1>Happy<br>1st<br>Anniversary</h1>
+            </section>
+
+            <div class="dashboard-grid">
+                <div class="card card-flower">
+                    <iframe src="fflowers.html" class="flower-iframe" title="Floating Flowers"></iframe>
+                </div>
+
+                <div class="envelope-wrapper-outer">
+                    <iframe src="envelope.html" class="envelope-iframe" title="Anniversary Letter"></iframe>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Letter Pop-up Modal -->
+    <div id="letter-modal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content letter-pop-up">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <div class="pop-up-letter">
+                <h2>Happy Anniversary!</h2>
+                <div class="letter-text">
+                    <p>To my one and only girlfriend,</p>
+                    <p>One year down, a lifetime to go.</p>
+                    <p>You were the most beautiful, sweetest year of my life. You do not need to be a special person to
+                        make everyday days special. Taking you as my lover is convenient, natural, and entirely right.
+                    </p>
+                    <p>I am so thankful of all the laughs, moments of silence and dreams we have together. It is a year
+                        after it and I do get butterflies when I see you. I am still so fortunate to have you as mine.
+                    </p>
+                </div>
+                <div class="letter-footer">Forever & Always ❤️</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secured Entry | Passcode Protected</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="locked-state" class="screen active">
+        <div class="glass-island">
+            <div class="header">
+                <div class="lock-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="passcode-entry">
+                <div class="dots-container" id="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="numpad">
+                    <button class="num-btn" data-value="1">1</button>
+                    <button class="num-btn" data-value="2">2</button>
+                    <button class="num-btn" data-value="3">3</button>
+                    <button class="num-btn" data-value="4">4</button>
+                    <button class="num-btn" data-value="5">5</button>
+                    <button class="num-btn" data-value="6">6</button>
+                    <button class="num-btn" data-value="7">7</button>
+                    <button class="num-btn" data-value="8">8</button>
+                    <button class="num-btn" data-value="9">9</button>
+                    <div></div>
+                    <button class="num-btn" data-value="0">0</button>
+                    <div></div>
+                </div>
+                <div id="error-msg" class="error-msg">Incorrect Passcode</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
